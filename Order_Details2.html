@@ -68,7 +68,6 @@
             var apiUrl = 'http://AKISRVBOOMITEST.akigroup.int:9093/ws/rest/orders/get/OrderDetails?OrderNumber=' + encodeURIComponent(OrderNumber) + '&Department=' + encodeURIComponent(Department);
 
             // Make an API request
-            const basicAuthHeader = 'Basic dXNlcmQzNjVAYWxraGF5YXQtOEc1UkRPOjk0MTJmYzYzLTYwZjgtNDYyOC05OWE5LTIwZDdhYzQyODIyMg==';
             fetch(apiUrl, {
                 method: 'POST',	
                 headers: {
