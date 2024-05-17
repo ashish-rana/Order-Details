@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Input Page</title>
     <style>
-        /* Add your CSS styles here */
+         /* Add your CSS styles here */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #FCFCFC;
             padding: 20px;
         }
         form {
-            background-color: #fff;
+            background-color: #F3F3F3;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -29,7 +29,7 @@
             box-sizing: border-box;
         }
         button {
-            background-color: #4CAF50;
+            background-color: #B19367;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -37,7 +37,7 @@
             cursor: pointer;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #9c815a;
         }
         #response {
             margin-top: 20px;
@@ -59,11 +59,17 @@
     <div id="response"></div>
 
     <script>
+        var username = null;
+        var password = null;
+        
         function submitForm() {
-            // Prompt for username and password
-            var username = window.prompt("Enter your username:");
-            var password = window.prompt("Enter your password:");
-
+            // Prompt for username and password if not already set
+            if (!username) {
+                username = window.prompt("Enter your username:");
+            }
+            if (!password) {
+                password = window.prompt("Enter your password:");
+            }
             // Get values from input fields
             var OrderNumber = document.getElementById('OrderNumber').value;
             var Department = document.getElementById('Department').value;
